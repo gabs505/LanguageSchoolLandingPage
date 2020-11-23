@@ -1,0 +1,272 @@
+ @media only screen and (max-width: 925px){
+    .hero-image{
+        display:none;
+    }
+
+    .hello-section{
+        min-height:500px;
+        /* background-image: url(../img/main_template_mobile.svg);
+        background-repeat: no-repeat; 
+        background-size: contain;
+        background-position: bottom right; */
+        background-image: url(../img/bubble.png);
+        background-repeat: no-repeat; 
+        background-size: contain;
+        background-position: calc(50% - 20px) calc(50% + 40px) ;
+    }
+
+    .nav-item{
+        margin: 0 30px;
+    }
+ }
+
+
+ @media only screen and (max-width: 768px){
+
+    .burger-menu{
+        display:block;
+        z-index:300;
+    }
+    
+    .nav-content{
+        background-color: white;
+        height:100vh;
+        width:100vw;
+        max-width:unset;
+        position:fixed;
+        top:0;
+        left:0;
+        padding:0px;
+        left:100vw;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        z-index:200;
+        transition:transform 0.4s;
+
+    }
+
+    .nav-item{
+        font-size:2em;
+        width:70%;
+        padding:20px 0;
+    }
+
+    .nav-item>a{
+        width:70%;
+        height:100%;
+        transition:all 0.2s ease-out;
+    }
+
+    .nav-item a:hover{
+        transform:translateX(10px);
+        text-shadow: 1px 0px 6px #7FA8B0;
+    }
+
+    .nav-item:hover:before,
+    .nav-item:focus:before{
+        visibility:hidden;
+    }
+
+    .section{
+        height:unset;
+    }
+
+    .info-div{
+        margin-top:20px;
+    }
+
+    .hello-section{
+        background-size: 110% 70%;
+    }
+
+    .hello-section-items{
+        width:90%;
+        margin-left:-45%;
+    }
+
+    
+    .about-me-section,.contact-section{
+        flex-wrap:wrap;
+    }
+
+    .offer-section{
+        flex-wrap:wrap-reverse;
+        margin-top:30px;
+    }
+
+
+    
+    
+    .reviews-header{
+        text-align:left;
+        align-self:flex-start;
+    }
+    
+    form{
+        padding-left:10px;
+    }
+
+    
+ }
+
+ @media only screen and (max-width: 520px){
+
+    /* .nav-content{
+        text-align:center;
+        margin:0 auto;
+        padding-inline-start: 0;
+    }
+    .nav-item{
+        text-align: center;
+        max-width:60px;
+        padding:5px 0;
+        margin:5px;
+    } */
+
+    .main-section{
+        min-height:500px;
+    }
+
+    .nav-item{
+        font-size:1.5rem;
+        padding:10px;
+    }
+
+    .nav-item::before{
+        background-color:white;
+    }
+
+
+    .about-me-section{
+        margin-top:0;
+        padding:0;
+    }
+
+    .hello-section{
+        background-position: calc(50% - 20px) calc(50% + 30px);
+        background-size:130% 50%;
+    }
+    .hello-section-items{
+        margin-top:-5em; 
+           
+    }
+    
+    .hello-header{
+        text-align:center;
+        font-size:2em;
+    }
+    
+    .hello-section-items p:first-of-type{
+        font-size:1.5em;
+        text-align: center;
+    }
+
+    
+
+    .review{
+        flex-basis:200px;
+        height:200px;
+    }
+
+    
+
+    .info-header{
+        
+        font-size:1.5rem;
+    }
+    
+
+    .contact-form-header{
+        font-size:1.5em;
+    }
+
+    form{
+        padding:20px;
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+    }
+    label{
+        width:70%;
+        max-width:500px;
+    }
+
+
+    .foot{
+        padding-top:20px;
+        height:60px;
+    }
+
+    .footer-graphic{
+        display:none;
+    }
+
+    .foot-info{
+        max-width:250px;
+        position:static;
+        margin:0 auto;
+        
+    }
+
+ }
+
+ @media only screen and (max-width: 360px){
+    .hello-header{
+        text-align:center;
+        font-size:1.5em;
+    }
+    
+    .hello-section-items p:first-of-type{
+        font-size:1em;
+        text-align: center;
+    }
+
+    .hello-section{
+        background-image:unset;
+    }
+    .info-header{
+        
+        font-size:1.2rem;
+    }
+
+    .contact-form-header{
+        font-size:1.2em;
+    }
+
+ }
+
+
+ @media only screen and (hover:none){
+    .nav-item:hover:before, .nav-item:focus:before,
+    .hello-section-items .button:hover:before,
+  .hello-section-items .button:focus:before {
+        visibility:hidden;
+    }
+
+    .hello-section-items .button{
+        display:none;
+    }
+ }
+
+
+ @media only screen and (orientation:portrait) and (min-width:1000px){
+     .main-section{
+        flex-wrap:wrap;
+     }
+     .hero-image{
+         display:none;
+     }
+
+     .hello-section{
+        min-height:700px;
+        /* background-image: url(../img/main_template_mobile.svg);
+        background-repeat: no-repeat; 
+        background-size: contain;
+        background-position: bottom right; */
+    }
+
+ }
+
+ 
