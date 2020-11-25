@@ -5,10 +5,6 @@
 
     .hello-section{
         min-height:500px;
-        /* background-image: url(../img/main_template_mobile.svg);
-        background-repeat: no-repeat; 
-        background-size: contain;
-        background-position: bottom right; */
         background-image: url(../img/bubble.png);
         background-repeat: no-repeat; 
         background-size: contain;
@@ -18,7 +14,8 @@
     .nav-item{
         margin: 0 30px;
     }
- }
+
+    
 
 
  @media only screen and (max-width: 768px){
@@ -27,6 +24,7 @@
         display:block;
         z-index:300;
     }
+
     
     .nav-content{
         background-color: white;
@@ -35,9 +33,10 @@
         max-width:unset;
         position:fixed;
         top:0;
-        left:0;
-        padding:0px;
         left:100vw;
+        
+        padding:0px;
+        
         display:flex;
         flex-direction:column;
         justify-content:center;
@@ -51,6 +50,28 @@
         font-size:2em;
         width:70%;
         padding:20px 0;
+        position:relative;
+    }
+    .nav-item::before{
+        content:'';
+        visibility:visible;
+        transform:unset;
+        width:90px;
+        position: absolute;
+        height: 20px;
+        bottom: 20px;
+        left: 30vw;
+        background-color: rgb(238, 205, 205);
+        z-index:-1;
+        border-radius: unset;
+    }
+
+    .nav-item:hover::before{
+        transform:scaleY(0.4);
+        transform-origin: top;
+        bottom: 8px;
+    
+        background-color:rgb(184, 154, 154);
     }
 
     .nav-item>a{
@@ -59,15 +80,15 @@
         transition:all 0.2s ease-out;
     }
 
-    .nav-item a:hover{
+    /* .nav-item a:hover{
         transform:translateX(10px);
         text-shadow: 1px 0px 6px #7FA8B0;
-    }
+    } */
 
-    .nav-item:hover:before,
+    /* .nav-item:hover:before,
     .nav-item:focus:before{
         visibility:hidden;
-    }
+    } */
 
     .section{
         height:unset;
@@ -83,7 +104,6 @@
 
     .hello-section-items{
         width:90%;
-        margin-left:-45%;
     }
 
     
@@ -111,19 +131,24 @@
     
  }
 
- @media only screen and (max-width: 520px){
-
-    /* .nav-content{
-        text-align:center;
-        margin:0 auto;
-        padding-inline-start: 0;
+ @media only screen and (max-width: 600px){
+    .step-img{
+        background-size:70%;
     }
-    .nav-item{
-        text-align: center;
-        max-width:60px;
-        padding:5px 0;
-        margin:5px;
-    } */
+
+    .step-text h1{
+        font-size:1.5rem;
+    }
+
+    p.info{
+        font-size:1.2rem;
+    }
+
+    .info-div p{
+        font-size:1rem;
+    }
+ }
+ @media only screen and (max-width: 520px){
 
     .main-section{
         min-height:500px;
@@ -135,22 +160,39 @@
     }
 
     .nav-item::before{
-        background-color:white;
+        width:60px;
+        height: 15px;
+        bottom: 10px;
+        left: 28vw;
+        
     }
+
+    .nav-item:hover::before{
+        transform:scaleY(0.4);
+        bottom: 6px;
+    
+        background-color:rgb(184, 154, 154);
+    }
+
+    /* .nav-item::before{
+        background-color:white;
+    } */
 
 
     .about-me-section{
-        margin-top:0;
-        padding:0;
+        margin-top:50px;
+        
     }
 
     .hello-section{
         background-position: calc(50% - 20px) calc(50% + 30px);
         background-size:130% 50%;
     }
-    .hello-section-items{
-        margin-top:-5em; 
-           
+    
+
+    .school-title{
+        font-size:2rem;
+    
     }
     
     .hello-header{
@@ -163,11 +205,21 @@
         text-align: center;
     }
 
+    p.info{
+        font-size:1rem;
+    }
     
+    .photo-div{
+        min-height:unset;
+        height:400px;
+    }
 
+    .reviews-wrapper{
+        padding:5px;
+        width:100%;
+    }
     .review{
-        flex-basis:200px;
-        height:200px;
+        flex-basis:90%;
     }
 
     
@@ -188,7 +240,7 @@
         flex-direction: column;
         align-items:center;
     }
-    label{
+    label:not([for="agreement"]){
         width:70%;
         max-width:500px;
     }
@@ -197,6 +249,7 @@
     .foot{
         padding-top:20px;
         height:60px;
+        box-sizing:content-box;
     }
 
     .footer-graphic{
@@ -215,7 +268,7 @@
  @media only screen and (max-width: 360px){
     .hello-header{
         text-align:center;
-        font-size:1.5em;
+        font-size:1.5rem;
     }
     
     .hello-section-items p:first-of-type{
@@ -223,8 +276,33 @@
         text-align: center;
     }
 
+    .school-title{
+        font-size:1.5rem;
+    }
+
     .hello-section{
-        background-image:unset;
+        background-size:120% 50%;
+    }
+
+    .step.even{
+        flex-wrap:wrap-reverse;
+    }
+
+    .step.odd{
+        flex-wrap:wrap;
+        background-color:rgb(236, 236, 236);
+    }
+
+    .step-text{
+        background-color: unset;
+    }
+    .step-img{
+        height:40px;
+        box-sizing:content-box;
+        background-origin:content-box;
+        padding-top:40px;
+        padding-bottom:20px;
+        background-size:contain;
     }
     .info-header{
         
@@ -235,8 +313,17 @@
         font-size:1.2em;
     }
 
+    label{
+        font-size:1rem;
+    }
+
  }
 
+ @media only screen and (max-width: 290px){
+     body{
+         font-size:14px;
+     }
+ }
 
  @media only screen and (hover:none){
     .nav-item:hover:before, .nav-item:focus:before,
@@ -255,18 +342,19 @@
      .main-section{
         flex-wrap:wrap;
      }
+     .hello-section{
+        min-height:500px;
+        background-image: url(../img/bubble.png);
+        background-repeat: no-repeat; 
+        background-size: contain;
+        background-position: calc(50% - 20px) calc(50% + 40px) ;
+    }
      .hero-image{
          display:none;
      }
 
      .hello-section{
         min-height:700px;
-        /* background-image: url(../img/main_template_mobile.svg);
-        background-repeat: no-repeat; 
-        background-size: contain;
-        background-position: bottom right; */
     }
 
  }
-
- 

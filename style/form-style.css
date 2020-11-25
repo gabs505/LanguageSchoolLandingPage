@@ -8,9 +8,9 @@ form{
 label{
     display:block;
     padding:10px 0;
-    font-size:1em;
+    font-size:1.3em;
 }
-input,textarea{
+input:not([type="checkbox"]),textarea{
     border-left:0;
     border-right:0;
     border-top:0;
@@ -22,7 +22,7 @@ input,textarea{
     box-shadow: 2px 2px 21px -1px rgb(216, 170, 170);
 }
 
-input{
+input:not([type="checkbox"]){
     height:20px;
 }
 textarea{
@@ -31,22 +31,36 @@ textarea{
     
 }
 
+.agreement{
+    width:60%;
+    margin-top:10px;
+}
+input#agreement{
+    height:unset;
+}
+
+label[for="agreement"]{
+    display:inline;
+    font-size:1em;
+}
 
 #submit{
+    
     all:initial;
+    box-sizing:border-box;
     display:block;
     width:70%;
     max-width:500px;
-    height:40px;
+    height:60px;
     padding:10px;
     margin-top:10px;
     background-color:rgb(220, 238, 243);
     border:2px solid rgb(194, 207, 241);
     border-radius:10px;
-    
+    font-weight:bold;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
+    /* letter-spacing: 0.2em; */
 
 
 }
