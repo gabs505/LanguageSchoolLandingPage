@@ -107,6 +107,18 @@ p[data-scroll="in"]{
     transition:opacity 0.9s;
 }
 
+/* .step[data-scroll="in"]::before{
+    transform:scaleX(1);
+} */
+
+.info-block[data-scroll="in"]{
+    transform:scale(1);
+}
+
+.info-block[data-scroll="out"]{
+    transform:scale(0);
+}
+
 /* .review[data-scroll="in"]:first-child{
     opacity:1;
     transition:opacity 0.5s;

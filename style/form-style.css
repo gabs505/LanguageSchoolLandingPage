@@ -11,10 +11,11 @@ label{
     font-size:1.3em;
 }
 input:not([type="checkbox"]),textarea{
+    box-sizing:content-box;
     border-left:0;
     border-right:0;
     border-top:0;
-    padding:1em;
+    padding:0.5em;
     background-color:rgb(220, 238, 243);
     padding-bottom:5px;
     width:70%;

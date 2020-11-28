@@ -407,8 +407,35 @@ header> div{
     justify-content:space-around;
     height:200px;
     width:100%;
-    margin:0 auto;
+    margin:0 auto;position:relative;
 }
+
+.step::before{
+    content:'';
+    position:absolute;
+    height:200px;
+    width:100%;
+    background-color: rgb(252, 213, 213);
+    top:0;
+    left:0;
+    transform:scaleX(0);
+    transition:transform 1s cubic-bezier(.6,.39,.89,1.04);
+    /* transition-delay:0.25s; */
+    transform-origin: right;
+
+}
+
+.step:hover::before{
+    transform:scaleX(1);
+}
+
+.step:nth-child(odd):hover::before{
+    transform-origin:left;
+}
+
+/* .step:hover .step-text{
+    background-color: transparent;
+} */
 
 .step-img{
     flex:1 0 40%;
@@ -417,8 +444,11 @@ header> div{
     background-position: center;
     background-clip: content-box;
     padding:0 20px;
+    z-index:20;
     
 }
+
+
 .step-text{
     flex:1 1 60%;
     display:flex;
@@ -426,12 +456,30 @@ header> div{
     align-items: center;
     background-color:rgb(250, 244, 244);
     color:#7584a7;
-    
     padding:20px;
+    z-index:20;
 }
 .step-text h1{
     text-align:center;
 }
+
+/* @keyframes step-text-animation{
+    0%{
+        transform:rotate(0);
+    }
+    30%{
+        transform:rotate(-10deg);
+    }
+    70%{
+        transform:rotate(10deg);
+    }
+    100%{
+        transform:rotate(0);
+    }
+}
+.step:hover .step-text h1{
+    animation:step-text-animation 0.5s;
+} */
 
 .step1-img{
     background-image: url('../img/step1.png');
@@ -476,6 +524,8 @@ header> div{
     border-radius:20px;
     padding:10px 30px;
     box-sizing: border-box;
+    transform:scale(0.8);
+    transition:transform 1s;
 }
 
 p.info{
